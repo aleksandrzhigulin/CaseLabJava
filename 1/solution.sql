@@ -1,0 +1,1 @@
+SELECT surname FROM (SELECT *, DENSE_RANK() OVER (ORDER BY experience Desc) AS 'rank' FROM employees) as sort WHERE sort.rank = 2;
